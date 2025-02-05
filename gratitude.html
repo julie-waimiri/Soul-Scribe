@@ -81,7 +81,88 @@
         button[type="submit"]:hover {
             background-color: #0b5c2f;
         }
+        
+        /* Saved Entries Section */
+        #savedReflections {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            align-items: flex-start;
+            margin-top: 20px;
+        }
     
+        .entry {
+            background-color: #eaf0e9dc;
+            padding: 15px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            width: 100%;
+            max-width: 600px;
+            text-align: left;
+        }
+    
+        .entry h3 {
+            margin: 0;
+            font-size: 1.2rem;
+            color: #056923cc;
+        }
+    
+        .entry p {
+            margin: 5px 0;
+            font-size: 1rem;
+            color: #363636;
+        }
+    
+        .entry .mood {
+            font-weight: bold;
+            font-family: system-ui;
+            color: #055512a8;
+        }
+    
+        .entry .actions {
+            display: flex;
+            gap: 10px;
+            margin-top: 10px;
+        }
+    
+        .entry .actions button {
+            padding: 5px 10px;
+            font-size: 0.9rem;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+    
+        .entry .actions .edit-btn {
+            background-color: #cab88dd0;
+            color: #333;
+        }
+    
+        .entry .actions .delete-btn {
+            background-color: #ac2929;
+            color: #fff;
+        }
+    
+        .entry .actions button:hover {
+            opacity: 0.8;
+        }
+    
+        /* Footer Styles */
+        footer {
+            margin-top: 40px;
+            margin-bottom: 40px;
+        }
+
+        .back-btn {
+            color: #09300f;
+            text-decoration: none;
+            font-size: 1rem;
+        }
+    
+        .back-btn:hover {
+            text-decoration: underline;
+        }
     </style>
 
 </head>
