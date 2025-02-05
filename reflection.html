@@ -9,6 +9,21 @@
 <body>
     <h1>REFLECTIONS♡</h1>
     <p>Take a moment to pause and reflect on your thoughts and experiences. Each reflection brings clarity and growth, helping you understand your journey a little more each day.</p>
+
+    <div class="container">
+        <h2>New Journal Entry</h2>
+        <form id="reflections">
+            <label for="date">Date</label>
+            <input type="date" id="date" name="date" required>
+
+            <label for="title">Title</label>
+            <input type="text" name="title" id="title" placeholder="Enter Journal Title" required>
+
+            <label for="journalEntry">What's on Your Mind?</label>
+            <input type="text" name="journalEntry" id="journalEntry" placeholder="Share your reflections">
+            
+            <button type="submit">Save Entry</button>
+        </form>
  
 
 <script src="reflection.js"></script>
