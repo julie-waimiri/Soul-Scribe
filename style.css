@@ -1,0 +1,30 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(90deg, #2d979ebe, #b8637cc0);
+    color: #333333;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.2rem;
+    margin-top: 50px;
+    color: #520818b2;
+}
+
+h2 {
+    font-size: 1.6rem;
+    color: #141d299c;
+    font-style: italic;
+    font-family: 'Times New Roman';
+}
+
+p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin: 20px auto;
+    max-width: 600px;
+    color: #333030d8;
+}
