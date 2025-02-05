@@ -53,5 +53,28 @@ form.addEventListener("submit", (e) => {
     form.reset(); // Clear form
 });
 
+// Delete an entry
+function deleteEntry(index) {
+    const entries = JSON.parse(localStorage.getItem("growth")) || [];
+    entries.splice(index, 1); // Remove entry
+    localStorage.setItem("growth", JSON.stringify(entries));
+    loadEntries(); // Reload entries
+}
+
+// Edit an entry
+function editEntry(index) {
+    const entries = JSON.parse(localStorage.getItem("growth")) || [];
+    const entry = entries[index];
+
+    // Populate form with entry data
+    document.getElementById("date").value = entry.date;
+    document.getElementById("title").value = entry.title;
+    document.getElementById("mood").value = entry.mood;
+    document.getElementById("journalEntry").value = entry.journalEntry;
+
+    // Delete the old entry
+    deleteEntry(index);
+}
+
 // Load entries on page load
 loadEntries();
