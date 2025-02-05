@@ -81,7 +81,7 @@
         button[type="submit"]:hover {
             background-color: #0b5c2f;
         }
-        
+
         /* Saved Entries Section */
         #savedReflections {
             display: flex;
@@ -162,6 +162,41 @@
     
         .back-btn:hover {
             text-decoration: underline;
+        }
+
+        /* Media Queries for Responsiveness */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+    
+            p {
+                font-size: 1rem;
+            }
+    
+            .container {
+                padding: 15px;
+            }
+    
+            input[type="date"],
+            input[type="text"],
+            select {
+                width: 90%;
+            }
+        }
+    
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+    
+            p {
+                font-size: 0.9rem;
+            }
+    
+            button[type="submit"] {
+                width: 100%;
+            }
         }
     </style>
 
