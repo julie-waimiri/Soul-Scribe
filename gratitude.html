@@ -9,7 +9,31 @@
 <body>
     <h1>GRATITUDE♡</h1>
     <p>Gratitude is a pause to appreciate life’s simple pleasures. Celebrate the moments, people and experiences that bring light to your life, and let this reminder inspire you to embrace every blessing along the way!</p>
-    
+
+    <div class="container">
+        <h2>New Journal Entry</h2>
+        <form id="Gratitude">
+            <label for="date">Date</label>
+            <input type="date" id="date" name="date" required>
+
+            <label for="title">Title</label>
+            <input type="text" name="title" id="title" placeholder="Enter Journal Title" required>
+
+            <label for="mood">Mood</label>
+            <select name="mood" id="mood">
+                <option value="happy">Happy 😊</option>
+                <option value="sad">Sad 😔</option>
+                <option value="angry">Angry 😤</option>
+                <option value="anxious">Anxious 😟</option>
+                <option value="grateful">Grateful 🙏</option>
+                <option value="excited">Excited 🎉</option>
+            </select> 
+
+            <label for="journalEntry">What's on Your Mind?</label>
+            <input type="text" name="journalEntry" id="journalEntry" placeholder="What are you grateful for?">
+            
+            <button type="submit">Save Entry</button>
+        </form>
     
 <script src="gratitude.js"></script>
 </body>
