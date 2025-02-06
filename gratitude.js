@@ -23,3 +23,36 @@ function loadEntries() {
         savedGratitude.appendChild(entryDiv);
     });
 }
+
+// Save entry to localStorage
+form.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    // Validate date
+    const dateInput = document.getElementById("date").value;
+    const [year, month, day] = dateInput.split("-");
+    if (parseInt(month) > 12 || parseInt(day) > 31) {
+        alert("Invalid date! Month must be ≤ 12 and day must be ≤ 31.");
+        return;
+    }
+
+    // Create entry object
+    const entry = {
+        date: dateInput,
+        title: document.getElementById("title").value,
+        mood: document.getElementById("mood").value,
+        journalEntry: document.getElementById("journalEntry").value,
+    };
+
+    // Save to localStorage
+    const entries = JSON.parse(localStorage.getItem("gratitude")) || [];
+    entries.push(entry);
+    localStorage.setItem("gratitude", JSON.stringify(entries));
+
+    // Reload entries
+    loadEntries();
+    form.reset(); // Clear form
+});
+
+// Load entries on page load
+loadEntries();
